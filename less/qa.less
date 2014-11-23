@@ -1,0 +1,40 @@
+article.qa {
+  margin: 0px 312px 0 18px;
+  padding: 20px 0 0 0;
+  h2 {
+    font: bold 20px/35px 'Open Sans';
+    margin-bottom: -4px;
+    padding: 0 0 0 30px;
+  }
+  .q-wrap {
+    border-bottom: 1px solid #bfbfc0;
+    &:last-child {border: none;}
+    .q {
+      font: 14px/18px 'Open Sans';
+      font-weight: bold;
+      padding: 15px 30px;
+      position: relative;
+      cursor: pointer;
+      &:hover {background: rgba(0, 0, 0, 0.1);}
+      i {
+        display: block;
+        float: left;
+        width: 9px;
+        height: 9px;
+        position: absolute;
+        top: 15px;
+        left: 0;
+        background: url(i/arrows.png) no-repeat;
+        margin: 4px 13px 0 11px;
+      }
+    }
+    .a {
+      padding: 10px 0 25px 30px;
+      display: none;
+    }
+    &.open {
+      .q i {background-position: left bottom;}
+      .a {display: block;}
+    }
+  }
+}

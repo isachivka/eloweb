@@ -1,0 +1,10 @@
+# TEAM
+
+    juicyigor - frontend developer - juicyigor@icloud.com
+
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, CoffeeScript,
+    LESS

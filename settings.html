@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <title></title>
+  <meta name="description">
+  <meta content="width=device-width" name="viewport">
+  <link href="application.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=PT+Serif:700|PT+Sans+Narrow|Open+Sans:400,700&subset=latin,cyrillic" rel="stylesheet">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script>window.html5 || document.write("<script src="js/vendor/html5shiv.js"><\/script>")</script>
+  <![endif]-->
+</head>
+<body><header>
+  <a href="#" class="logo"><img src="i/logo.png"></a>
+  <ul>
+    <li><a href="">Текущие назначения</a></li>
+    <li><a href="">График лечения</a></li>
+    <li><a href="">Вопрос-ответ</a></li>
+    <li><a href="">Сообщить о побочных эффектах</a></li>
+  </ul>
+  <ul class="right">
+    <li><a class="active" href=""><img src="i/settings.png"> Настройки</a></li>
+  </ul>
+</header>
+<section class="content">
+  <article class="settings">
+    <ul class="right"><li><a href="">Выйти из сервиса</a></li></ul>
+    <h3>Настройки</h3>
+    <hr class="hr1">
+    <form class="form1">
+      <h2>Уведомления</h2>
+      <p>Вам будут приходить SMS и e-mail уведомления:</p>
+      <p>
+        <strong>• по приему препаратов:</strong> за 1 час и за 15 мин; <br />
+        <strong>• визит в клинику:</strong> за 3 дня и за 1 день.
+      </p>
+      <div class="cb-field first">
+        <input type="checkbox" id="cb1"> <div class="label"><label for="cb1">Получать смс-уведомления на номер: </label><span id="phone">+380 67 123 45 67</span> <a href="" data-role="popup_open" data-target="#pop2">Изменить</a></div>
+      </div>
+      <div class="cb-field">
+        <input type="checkbox" id="cb2"> <div class="label"><label for="cb2" class="l_label">Получать уведомления на e-mail: </label> <input class="w200" type="text"><div class="clear"></div></div>
+      </div>
+      <div class="cb-field last">
+        <input type="checkbox" id="cb3"> <div class="label"><label for="cb3">Ставя галочку в данном поле, я соглашаюсь получать напоминания от данного сайта при помощи SMS и/или e-mail. <a href="">Условия пользования приложением</a></label></div>
+      </div>
+      <h2>Информация о клинике</h2>
+      <p>Внесенная информация будет отображаться в графике лечения.</p>
+      <div class="mar">
+        <div class="wr">
+          <div class="col1">
+            <div class="field">
+              <label>Название клиники</label>
+              <div class="input"><input type="text" value="Длинное название клиники"></div>
+            </div>
+          </div>
+          <div class="col2">
+            <div class="field">
+              <label>Сайт</label>
+              <div class="input"><input type="text" value="ambulance.com"></div>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Телефон</label>
+          <div class="input adding_input_fix">
+            <input type="text" class="phone_field mrr">
+            <a href="" class="add"><img src="i/add.png"> <i>Добавить</i></a>
+            <div class="hide_template_to_add"><input type="text" class="phone_field mrr"></div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Адрес</label>
+          <div class="input"><input type="text"></div>
+        </div>
+        <div class="wr">
+          <div class="col1">
+            <div class="field">
+              <label>ФИО доктора</label>
+              <div class="input"><input type="text"></div>
+            </div>
+          </div>
+          <div class="col2">
+            <div class="field">
+              <label>Телефон</label>
+              <div class="input"><input type="text" class="phone_field"></div>
+            </div>
+          </div>
+        </div>
+        <div class="wr">
+          <div class="col1">
+            <div class="field">
+              <label>ФИО ассистента</label>
+              <div class="input"><input type="text"></div>
+            </div>
+          </div>
+          <div class="col2">
+            <div class="field">
+              <label>Телефон</label>
+              <div class="input"><input type="text" class="phone_field"></div>
+            </div>
+          </div>
+        </div>
+        <div class="wr">
+          <div class="col1">
+            <div class="field">
+              <label>Примечания</label>
+              <div class="input"><textarea></textarea></div>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="input"><input type="submit" value="Сохранить"><div class="clear"></div></div>
+        </div>
+      </div>
+    </form>
+    <h2>Удалить аккаунт</h2>
+    <p>Учтите, что при этом история лечения и любая другая информация  удаляются без возможности восстановления. Подписка на уведомления аннулируется.</p>
+    <p><small><a href="" data-role="popup_open" data-target="#pop1">Удалить</a></small></p>
+  </article>
+</section>
+
+<div class="window-wrap" id="pop1" data-role="popup">
+  <div class="window sure" data-role="popup_window">
+    <form class="form1" action="">
+      <a href="" data-role="popup_close" class="close"></a>
+      <h2>Удалить аккаунт</h2>
+      <p>Учтите, что при этом история лечения и любая другая информация  удаляются без возможности восстановления. Подписка на уведомления аннулируется.</p>
+      <div class="field"><div class="input"><input type="submit" value="Удалить"><a data-role="popup_close" href="">Отменить</a></div></div>
+    </form>
+  </div>
+</div>
+
+<div class="window-wrap" id="pop2" data-role="popup">
+  <div class="window phone" data-role="popup_window">
+    <form class="form1" action="">
+      <a href="" data-role="popup_close" class="close"></a>
+      <h2>Изменение номера телефона:</h2>
+      <div class="field">
+        <label>Введите новый номер: </label>
+        <div class="input">
+          <input type="text" class="phone_field"><input class="fr" type="submit" value="Сохранить">
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <hr class="hr1">
+  <ul class="right">
+    <li><a href="">Условия пользования сайтом</a></li>
+    <li><a href="">Политика конфиденциальности</a></li>
+  </ul>
+  <div class="gray">Данный сайт — вспомогательный ресурс. Основным является протокол, выданный врачём. Необходимо сверить правильность введённых данных. Все препараты необходимо принимать непрерывно.  Любая отмена происходит постепенно под контролем лечащего врача.</div>
+</footer>  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <!--<script src="js/crosspixel.js"></script>-->
+  <script src="js/vendor/jquery.maskedinput.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+</body>
+</html>

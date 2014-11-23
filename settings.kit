@@ -1,0 +1,128 @@
+<!-- @include 'kit/head.kit' -->
+<!-- @include 'kit/header.kit' -->
+
+<section class="content">
+  <article class="settings">
+    <ul class="right"><li><a href="">Выйти из сервиса</a></li></ul>
+    <h3>Настройки</h3>
+    <hr class="hr1">
+    <form class="form1">
+      <h2>Уведомления</h2>
+      <p>Вам будут приходить SMS и e-mail уведомления:</p>
+      <p>
+        <strong>• по приему препаратов:</strong> за 1 час и за 15 мин; <br />
+        <strong>• визит в клинику:</strong> за 3 дня и за 1 день.
+      </p>
+      <div class="cb-field first">
+        <input type="checkbox" id="cb1"> <div class="label"><label for="cb1">Получать смс-уведомления на номер: </label><span id="phone">+380 67 123 45 67</span> <a href="" data-role="popup_open" data-target="#pop2">Изменить</a></div>
+      </div>
+      <div class="cb-field">
+        <input type="checkbox" id="cb2"> <div class="label"><label for="cb2" class="l_label">Получать уведомления на e-mail: </label> <input class="w200" type="text"><div class="clear"></div></div>
+      </div>
+      <div class="cb-field last">
+        <input type="checkbox" id="cb3"> <div class="label"><label for="cb3">Ставя галочку в данном поле, я соглашаюсь получать напоминания от данного сайта при помощи SMS и/или e-mail. <a href="">Условия пользования приложением</a></label></div>
+      </div>
+      <h2>Информация о клинике</h2>
+      <p>Внесенная информация будет отображаться в графике лечения.</p>
+      <div class="mar">
+        <div class="wr">
+          <div class="col1">
+            <div class="field">
+              <label>Название клиники</label>
+              <div class="input"><input type="text" value="Длинное название клиники"></div>
+            </div>
+          </div>
+          <div class="col2">
+            <div class="field">
+              <label>Сайт</label>
+              <div class="input"><input type="text" value="ambulance.com"></div>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Телефон</label>
+          <div class="input adding_input_fix">
+            <input type="text" class="phone_field mrr">
+            <a href="" class="add"><img src="i/add.png"> <i>Добавить</i></a>
+            <div class="hide_template_to_add"><input type="text" class="phone_field mrr"></div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Адрес</label>
+          <div class="input"><input type="text"></div>
+        </div>
+        <div class="wr">
+          <div class="col1">
+            <div class="field">
+              <label>ФИО доктора</label>
+              <div class="input"><input type="text"></div>
+            </div>
+          </div>
+          <div class="col2">
+            <div class="field">
+              <label>Телефон</label>
+              <div class="input"><input type="text" class="phone_field"></div>
+            </div>
+          </div>
+        </div>
+        <div class="wr">
+          <div class="col1">
+            <div class="field">
+              <label>ФИО ассистента</label>
+              <div class="input"><input type="text"></div>
+            </div>
+          </div>
+          <div class="col2">
+            <div class="field">
+              <label>Телефон</label>
+              <div class="input"><input type="text" class="phone_field"></div>
+            </div>
+          </div>
+        </div>
+        <div class="wr">
+          <div class="col1">
+            <div class="field">
+              <label>Примечания</label>
+              <div class="input"><textarea></textarea></div>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="input"><input type="submit" value="Сохранить"><div class="clear"></div></div>
+        </div>
+      </div>
+    </form>
+    <h2>Удалить аккаунт</h2>
+    <p>Учтите, что при этом история лечения и любая другая информация  удаляются без возможности восстановления. Подписка на уведомления аннулируется.</p>
+    <p><small><a href="" data-role="popup_open" data-target="#pop1">Удалить</a></small></p>
+  </article>
+</section>
+
+<div class="window-wrap" id="pop1" data-role="popup">
+  <div class="window sure" data-role="popup_window">
+    <form class="form1" action="">
+      <a href="" data-role="popup_close" class="close"></a>
+      <h2>Удалить аккаунт</h2>
+      <p>Учтите, что при этом история лечения и любая другая информация  удаляются без возможности восстановления. Подписка на уведомления аннулируется.</p>
+      <div class="field"><div class="input"><input type="submit" value="Удалить"><a data-role="popup_close" href="">Отменить</a></div></div>
+    </form>
+  </div>
+</div>
+
+<div class="window-wrap" id="pop2" data-role="popup">
+  <div class="window phone" data-role="popup_window">
+    <form class="form1" action="">
+      <a href="" data-role="popup_close" class="close"></a>
+      <h2>Изменение номера телефона:</h2>
+      <div class="field">
+        <label>Введите новый номер: </label>
+        <div class="input">
+          <input type="text" class="phone_field"><input class="fr" type="submit" value="Сохранить">
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- @include 'kit/footer.kit' -->
+<!-- @include 'kit/foot.kit' -->

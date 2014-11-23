@@ -1,0 +1,186 @@
+body.appointment {
+  .noise1();
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  footer {
+    position: relative;
+    bottom: auto;
+  }
+}
+
+article.appointment {
+  margin: 0 0 0 0;
+  padding: 0px 20px;
+  position: relative;
+  .date_box {
+    font: 12px 'Open Sans';
+    color: #535353;
+    line-height: 17px;
+    padding: 55px 0 0 0;
+    width: 200px;
+    .number {float: left;font: bold 41px 'PT Serif';}
+    .month {margin: 0 0 0 52px;padding: 8px 0 0 0;}
+    .day {margin: 0 0 0 52px;font-size: 18px;font-weight: bold;}
+  }
+  .appointment_box {
+    font: 14px 'Open Sans';
+    color: #a7a7a7;
+    position: absolute;
+    right: 20px;
+    padding: 50px 0 0 0;
+    p {margin: 0 0 30px;}
+    h4 {font-size: 18px;color: #535353;&:first-child{margin: 0 0 18px;}}
+    a {color: #666666;font-size: 12px;}
+    dl {
+      margin: 0 0 14px;
+      font: 14px/14px 'PT Sans Narrow';
+      color: #a7a7a7;
+      &.first {margin: 18px 0 14px 0;}
+      dd {
+        margin: 0 70px 0 0;
+      }
+      dt {
+        float: right;
+      }
+    }
+  }
+  .calendar_box {
+    padding-top: 400px;
+    width: 200px;
+    height: 190px;
+    background: url(i/calendar.png) no-repeat bottom left;
+  }
+  section {
+    min-height: 600px;
+    margin: 0 291px 0 248px;
+    .padding {
+      height: 55px;
+    }
+    p.date {
+      font: 12px/26px 'Open Sans';
+      color: #a7a7a7;
+      padding: 0 0 0 20px;
+    }
+    .drug_wrap {
+      background: #fff;
+      padding: 0 20px;
+    }
+    .drug_box {
+      background: #fff;
+      padding: 24px 0;
+      border-top: 1px solid #eeeeee;
+      border-bottom: 1px solid #fff;
+      position: relative;
+      .af, .bf {
+        position: absolute;
+        display: none;
+        top: -12px;
+        left: 50%;
+        margin-left: -242px;
+        width: 484px;
+        height: 12px;
+        background: url(i/shadows.png) no-repeat;
+        z-index: 30;
+      }
+      .bf {
+        background-position: left bottom;
+        top: auto;
+        bottom: -12px;
+      }
+      &:first-child {border-color: #fff;}
+      .date {float: left;font-size: 12px;}
+      .blue {color: #00ade0;}
+      .red {color: #f2947a;}
+      a {color: #a7a7a7;}
+      p {margin: 0 0 5px;}
+      .cb {float: right;margin: 0 0 0 20px;}
+      .stat {float: right;font-size: 12px;color: #a7a7a7;strong{font-size: 18px;}}
+      .data {margin: 0 130px 0 60px;}
+      .title {font-size: 18px;color: #000000;margin: 0 0 5px;}
+      p {font-size: 12px;color: #a7a7a7;line-height: 14px;}
+      &.gray {
+        @c: #a7a7a7;
+        color: @c;
+        .title, .date, p, a {color: @c;}
+      }
+      &:hover, &.active {
+        @c: #000;
+        color: @c;
+        .title, p, .stat, a {color: @c;}
+        .title {font-weight: bold;color: #535353;}
+        border-bottom: 1px solid #eee;
+        border-top: 1px solid #eee;
+        margin-left: -30px;
+        margin-right: -30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        .af, .bf {display: block;}
+      }
+      &:hover + .drug_box, &.active + .drug_box {
+        border-top-color: #fff;
+      }
+      i.icon {vertical-align: -2px;}
+    }
+  }
+  .pietimer {
+    position:relative;
+    font-size: 200px;
+    width:1em;
+    height:1em;
+    //float: left;
+    & > .percent {
+      color: #535353;
+      font: bold 42px 'PT Serif';
+      position: absolute;
+      height: 114px;
+      line-height: 114px;
+      width: 100%;
+      text-align:center;
+      display: none;
+      span {font-size: 24px;}
+    }
+    & > .slice {
+      position:absolute;
+      width:1em;
+      height:1em;
+      clip:rect(0px,1em,1em,0.5em);
+      &.gt50 {
+        clip:rect(auto, auto, auto, auto);
+      }
+      & > .pie {
+        border: 0.1em solid #c0c0c0;
+        position:absolute;
+        width:0.8em; /* 1 - (2 * border width) */
+        height:0.8em; /* 1 - (2 * border width) */
+        clip:rect(0em,0.5em,1em,0em);
+        -moz-border-radius:0.5em;
+        -webkit-border-radius:0.5em;
+        border-radius:0.5em;
+        &.fill {
+          -moz-transform:rotate(180deg) !important;
+          -webkit-transform:rotate(180deg) !important;
+          -o-transform:rotate(180deg) !important;
+          transform:rotate(180deg) !important;
+        }
+      }
+    }
+    &.fill > .percent {
+      display: none;
+    }
+    &.fill > .slice > .pie {
+      border: transparent;
+      background-color: #c0c0c0;
+      width:1em;
+      height:1em;
+    }
+  }
+  .graph {
+    height: 114px;
+    width: 114px;
+    margin: 0 auto 7px;
+  }
+}
